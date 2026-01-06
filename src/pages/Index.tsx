@@ -40,7 +40,7 @@ const Index = () => {
           }}>
               PPG PONGAL THIRUVIZHA'26    
               <span className="block text-3xl sm:text-4xl md:text-5xl mt-3 text-gold-light animate-shimmer">
-                போங்கல் திருவிழா
+                பொங்கல் திருவிழா
               </span>
             </h1>
 
@@ -67,8 +67,12 @@ const Index = () => {
                   View Events
                 </Button>
               </Link>
-              <Link to="/register-url/">
-                <Button variant="heroOutline" size="xl" className="min-w-[200px] text-base sm:text-lg font-extrabold bg-white/10 backdrop-blur-sm hover:bg-white/5">
+              <Link to="/events">
+                <Button 
+                  variant="heroOutline" 
+                  size="xl" 
+                  className="min-w-[200px] text-base sm:text-lg font-extrabold bg-white text-maroon-dark border-4 border-gold hover:bg-gold hover:text-white shadow-2xl hover:shadow-gold/50 transition-all duration-300"
+                >
                   Register Now
                 </Button>
               </Link>
@@ -146,7 +150,8 @@ const Index = () => {
               Event Highlights
             </h2>
             <p className="text-foreground/80 text-lg max-w-2xl mx-auto font-semibold">
-              Three days packed with cultural activities, creative competitions, and traditional games
+              Experience three spectacular days celebrating Tamil heritage through artistic expression, 
+              cultural performances, and traditional festivities
             </p>
           </div>
 
@@ -160,7 +165,8 @@ const Index = () => {
                 Day 1: Language & Creativity
               </h3>
               <p className="text-foreground/70 text-base mb-4 font-medium">
-                Rangoli, Thirukkural, Tamil poetry, and language challenges
+                Celebrate the beauty of Tamil language through vibrant Rangoli art, timeless Thirukkural wisdom, 
+                soulful poetry, and engaging linguistic challenges
               </p>
               <div className="flex items-center gap-2 text-sm text-maroon font-bold">
                 <Award className="h-5 w-5" />
@@ -177,7 +183,8 @@ const Index = () => {
                 Day 2: Expression & Performance
               </h3>
               <p className="text-foreground/70 text-base mb-4 font-medium">
-                GEN Z Thirukkural, debates, Therukoothu, and poetry writing
+                Witness modern interpretations with GEN Z Thirukkural, engaging debates, traditional 
+                Therukoothu street theater, and creative poetry composition
               </p>
               <div className="flex items-center gap-2 text-sm text-maroon-medium font-bold">
                 <Award className="h-5 w-5" />
@@ -194,7 +201,8 @@ const Index = () => {
                 Day 3: Games & Grand Finale
               </h3>
               <p className="text-foreground/70 text-base mb-4 font-medium">
-                Pot painting, sack race, tug of war, and the festive Uriadi
+                Experience traditional games including artistic pot painting, energetic sack races, 
+                thrilling tug of war, and the exciting Uriadi finale
               </p>
               <div className="flex items-center gap-2 text-sm text-accent font-bold">
                 <Award className="h-5 w-5" />
@@ -238,12 +246,95 @@ const Index = () => {
                   Browse Events
                 </Button>
               </Link>
-              <Link to="/register-url/">
-                <Button variant="hero" size="xl" className="min-w-[180px] bg-white text-maroon hover:bg-white/95 shadow-2xl font-extrabold">
+              <Link to="/events">
+                <Button 
+                  size="xl" 
+                  className="min-w-[180px] bg-white text-maroon-dark border-4 border-gold hover:bg-gold hover:text-white shadow-2xl hover:shadow-gold/50 transition-all duration-300 font-extrabold"
+                >
                   Register Now
                 </Button>
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Participate Section */}
+      <section className="py-20 bg-gradient-to-b from-background via-maroon/5 to-background relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-gradient-pongal mb-4">
+              Why Participate?
+            </h2>
+            <p className="text-foreground/80 text-lg max-w-2xl mx-auto font-semibold">
+              Join us in this grand celebration and create unforgettable memories
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {/* Cultural Heritage */}
+            <div className="bg-gradient-to-br from-card to-cream/30 rounded-2xl p-6 border-2 border-maroon/20 hover:border-maroon transition-all duration-300 hover:shadow-xl">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-maroon to-maroon-light flex items-center justify-center mb-4 mx-auto shadow-lg">
+                <span className="text-3xl">🎭</span>
+              </div>
+              <h3 className="font-heading text-xl font-bold text-maroon mb-3 text-center">
+                Cultural Heritage
+              </h3>
+              <p className="text-foreground/70 text-sm text-center leading-relaxed">
+                Connect with Tamil traditions and celebrate the rich cultural heritage through authentic festivities
+              </p>
+            </div>
+
+            {/* Showcase Talent */}
+            <div className="bg-gradient-to-br from-card to-cream/30 rounded-2xl p-6 border-2 border-maroon/20 hover:border-maroon transition-all duration-300 hover:shadow-xl">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-maroon-medium to-gold flex items-center justify-center mb-4 mx-auto shadow-lg">
+                <span className="text-3xl">⭐</span>
+              </div>
+              <h3 className="font-heading text-xl font-bold text-maroon-medium mb-3 text-center">
+                Showcase Talent
+              </h3>
+              <p className="text-foreground/70 text-sm text-center leading-relaxed">
+                Display your artistic abilities, language skills, and creative expression on a grand platform
+              </p>
+            </div>
+
+            {/* Win Prizes */}
+            <div className="bg-gradient-to-br from-card to-cream/30 rounded-2xl p-6 border-2 border-maroon/20 hover:border-maroon transition-all duration-300 hover:shadow-xl">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center mb-4 mx-auto shadow-lg">
+                <span className="text-3xl">🏆</span>
+              </div>
+              <h3 className="font-heading text-xl font-bold text-accent mb-3 text-center">
+                Win Prizes
+              </h3>
+              <p className="text-foreground/70 text-sm text-center leading-relaxed">
+                Compete in exciting events and win attractive prizes, certificates, and recognition
+              </p>
+            </div>
+
+            {/* Build Connections */}
+            <div className="bg-gradient-to-br from-card to-cream/30 rounded-2xl p-6 border-2 border-maroon/20 hover:border-maroon transition-all duration-300 hover:shadow-xl">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-maroon-dark to-maroon flex items-center justify-center mb-4 mx-auto shadow-lg">
+                <span className="text-3xl">🤝</span>
+              </div>
+              <h3 className="font-heading text-xl font-bold text-maroon-dark mb-3 text-center">
+                Build Connections
+              </h3>
+              <p className="text-foreground/70 text-sm text-center leading-relaxed">
+                Network with fellow students, share experiences, and create lasting friendships
+              </p>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-12">
+            <Link to="/events">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-maroon via-maroon-medium to-maroon text-white border-2 border-gold hover:border-gold-light shadow-xl hover:shadow-2xl transition-all duration-300 font-bold text-lg px-8"
+              >
+                Start Your Journey
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

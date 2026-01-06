@@ -63,7 +63,7 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/register-url/" className="text-gold hover:text-gold-light transition-colors flex items-center gap-2 group font-semibold">
+                <a href="/events" className="text-gold hover:text-gold-light transition-colors flex items-center gap-2 group font-semibold">
                   <span className="w-1.5 h-1.5 rounded-full bg-gold group-hover:bg-gold-light transition-colors" />
                   Register Now
                 </a>

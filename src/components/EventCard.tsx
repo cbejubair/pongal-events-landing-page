@@ -46,40 +46,44 @@ export const EventCard = ({ event, index }: EventCardProps) => {
   return (
     <Card
       className={cn(
-        "group overflow-hidden border-2 transition-all duration-300 hover:shadow-card hover:-translate-y-1",
-        dayBgColors[event.day]
+        "group overflow-hidden border-2 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] animate-zoom-in relative",
+        dayBgColors[event.day],
+        "before:absolute before:inset-0 before:bg-gradient-to-br before:from-gold/0 before:via-gold/5 before:to-gold/0 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500"
       )}
-      style={{ animationDelay: `${index * 100}ms` }}
+      style={{ animationDelay: `${index * 80}ms` }}
       onMouseLeave={() => setFlipped(false)}
     >
       <div style={{ perspective: 1000 }} className="relative">
         <div style={containerStyle} className="relative">
           {/* Front */}
           <div style={frontStyle} className="relative bg-transparent">
-            <CardHeader className="pb-2">
-              <div className="flex items-start justify-between gap-2">
-                <span className="text-4xl mb-2">{event.icon}</span>
-                <Badge variant="outline" className={cn("text-xs", dayColors[event.day])}>
+            <CardHeader className="pb-3 relative z-10">
+              <div className="flex items-start justify-between gap-2 mb-3">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gold/20 blur-xl rounded-full" />
+                  <span className="text-5xl relative z-10 drop-shadow-lg transition-transform group-hover:scale-110 duration-300">{event.icon}</span>
+                </div>
+                <Badge variant="outline" className={cn("text-xs font-bold shadow-sm", dayColors[event.day])}>
                   Day {event.day}
                 </Badge>
               </div>
-              <h3 className="font-heading font-bold text-lg text-foreground group-hover:text-primary transition-colors">
+              <h3 className="font-heading font-bold text-xl text-foreground group-hover:text-maroon transition-all duration-300 leading-tight">
                 {event.name}
               </h3>
             </CardHeader>
 
-            <CardContent className="pb-3">
-              <div className="flex items-center gap-2 mb-3">
-                <Badge variant="secondary" className="text-xs font-normal">
+            <CardContent className="pb-4 relative z-10">
+              <div className="flex flex-wrap items-center gap-2 mb-4">
+                <Badge variant="secondary" className="text-xs font-semibold shadow-sm">
                   {event.category}
                 </Badge>
                 <Badge
                   variant="outline"
                   className={cn(
-                    "text-xs",
+                    "text-xs font-semibold",
                     event.isTeamEvent
-                      ? "bg-accent/10 text-accent border-accent/30"
-                      : "bg-muted text-muted-foreground"
+                      ? "bg-gold/10 text-gold border-gold/30"
+                      : "bg-muted text-muted-foreground border-muted-foreground/30"
                   )}
                 >
                   {event.isTeamEvent ? (
@@ -89,15 +93,15 @@ export const EventCard = ({ event, index }: EventCardProps) => {
                   )}
                 </Badge>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
                 {event.description}
               </p>
             </CardContent>
 
-            <CardFooter className="pt-0 flex flex-col gap-2">
+            <CardFooter className="pt-0 flex flex-col gap-3 relative z-10">
               <div className="w-full">
                 <a
-                  href={event.formUrl || `/register-url/?event=${event.id}`}
+                  href={event.formUrl || `/events?event=${event.id}`}
                   target={event.formUrl ? "_blank" : undefined}
                   rel={event.formUrl ? "noopener noreferrer" : undefined}
                   className="w-full"
@@ -142,7 +146,7 @@ export const EventCard = ({ event, index }: EventCardProps) => {
 
             <div className="mt-4 flex gap-2">
               <a
-                href={event.formUrl || `/register-url/?event=${event.id}`}
+                href={event.formUrl || `/events?event=${event.id}`}
                 target={event.formUrl ? "_blank" : undefined}
                 rel={event.formUrl ? "noopener noreferrer" : undefined}
                 className="flex-1"

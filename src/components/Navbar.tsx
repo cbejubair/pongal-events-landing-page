@@ -1,110 +1,213 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/events", label: "Events" },
-  // { href: "/register", label: "Register" },
   { href: "/organizers", label: "Organizers" },
-  // { href: "/admin", label: "Admin" },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-maroon-dark/95 via-maroon/95 to-maroon-dark/95 backdrop-blur-xl border-b border-gold/30 shadow-2xl">
-      <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gold/20 blur-xl rounded-full" />
-              <span className="text-4xl relative z-10 drop-shadow-lg animate-bounce-gentle">🎍</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading font-extrabold bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent text-xl leading-tight group-hover:scale-105 transition-transform animate-shimmer">
-                Pongal 2026
-              </span>
-              <span className="text-[10px] text-white/90 leading-tight font-semibold tracking-wide">
-                PPG Institute of Technology
-              </span>
-            </div>
-          </Link>
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-2">
-            {navLinks.map((link) => (
-              <Link key={link.href} to={link.href}>
+  const isActive = (href: string) => location.pathname === href;
+
+  return (
+    <>
+      {/* Floating Navigation */}
+      <header
+        className={cn(
+          "fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-out w-[95%] max-w-7xl",
+          scrolled ? "top-2" : "top-4"
+        )}
+      >
+        <nav
+          className={cn(
+            "relative rounded-2xl border transition-all duration-500",
+            "bg-gradient-to-r from-maroon-dark/95 via-maroon/95 to-maroon-dark/95 backdrop-blur-xl",
+            "border-gold/30",
+            "shadow-lg shadow-black/20",
+            scrolled && "shadow-2xl shadow-black/30"
+          )}
+        >
+          <div className="flex h-16 md:h-18 items-center justify-between px-4 md:px-6 lg:px-8">
+            {/* Logo */}
+            <Link to="/" className="flex items-center gap-3 group relative z-10">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gold/20 blur-xl rounded-full" />
+                <span className="text-3xl md:text-4xl relative z-10 drop-shadow-lg transition-transform duration-300 group-hover:scale-110">
+                  🎍
+                </span>
+              </div>
+              <div className="flex flex-col">
+                <span className="font-heading font-extrabold bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent text-lg md:text-xl leading-tight group-hover:scale-105 transition-transform">
+                  Pongal 2026
+                </span>
+                <span className="text-[10px] text-white/90 leading-tight font-semibold tracking-wide">
+                  PPG Institute of Technology
+                </span>
+              </div>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center gap-2">
+              {navLinks.map((link) => {
+                const active = isActive(link.href);
+                return (
+                  <Link key={link.href} to={link.href}>
+                    <Button
+                      variant="ghost"
+                      className={cn(
+                        "relative px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300",
+                        "hover:bg-white/10 hover:text-gold",
+                        active ? "text-gold bg-white/15" : "text-white/90"
+                      )}
+                    >
+                      {link.label}
+                      {active && (
+                        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-1 bg-gold rounded-full animate-pulse" />
+                      )}
+                    </Button>
+                  </Link>
+                );
+              })}
+
+              {/* Desktop Register Button */}
+              <Link to="/register-url/">
                 <Button
-                  variant="ghost"
-                  className={cn(
-                    "text-white/90 hover:text-gold hover:bg-white/10 font-semibold transition-all relative group",
-                    location.pathname === link.href &&
-                      "text-gold bg-white/15 font-bold"
-                  )}
+                  size="sm"
+                  className="ml-4 group relative overflow-hidden bg-white text-maroon-dark border-2 border-gold hover:bg-gold hover:text-white shadow-lg hover:shadow-2xl hover:shadow-gold/25 transition-all duration-300 font-bold"
                 >
-                  {link.label}
-                  {location.pathname === link.href && (
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-0.5 bg-gold rounded-full" />
-                  )}
+                  <span className="flex items-center gap-2">
+                    <span>Register Now</span>
+                    <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
                 </Button>
               </Link>
-            ))}
-            <Link to="/register-url/">
-              <Button variant="festive" size="sm" className="ml-2 font-bold shadow-lg hover:shadow-gold transition-all">
-                Register Now
+            </div>
+
+            {/* Mobile Menu Toggle */}
+            <div className="lg:hidden relative">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsOpen(!isOpen)}
+                className="relative h-10 w-10 hover:bg-white/10 text-white hover:text-gold"
+              >
+                <Menu
+                  className={cn(
+                    "h-5 w-5 transition-all duration-300",
+                    isOpen && "rotate-90 scale-0"
+                  )}
+                />
+                <X
+                  className={cn(
+                    "h-5 w-5 absolute transition-all duration-300",
+                    isOpen ? "rotate-0 scale-100" : "-rotate-90 scale-0"
+                  )}
+                />
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </div>
+          </div>
+
+          {/* Animated Border Gradient */}
+          <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-gold/0 via-gold/20 to-gold/0 opacity-50 pointer-events-none" />
+        </nav>
+      </header>
+
+      {/* Mobile Dropdown Menu */}
+      <div
+        className={cn(
+          "lg:hidden fixed left-1/2 -translate-x-1/2 z-40 w-[95%] max-w-7xl transition-all duration-500 ease-out",
+          isOpen ? "top-[88px] opacity-100 visible" : "top-[60px] opacity-0 invisible"
+        )}
+      >
+        <div
+          className={cn(
+            "rounded-2xl border bg-maroon-dark/95 backdrop-blur-xl shadow-2xl overflow-hidden",
+            "border-gold/30",
+            "transform transition-all duration-500 origin-top",
+            isOpen ? "scale-y-100" : "scale-y-0"
+          )}
+        >
+          {/* Mobile Navigation */}
+          <nav className="p-4">
+            <div className="space-y-1">
+              {navLinks.map((link, index) => {
+                const active = isActive(link.href);
+                return (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={cn(
+                      "flex items-center justify-between p-4 rounded-xl font-semibold transition-all duration-300 group",
+                      "hover:bg-white/10",
+                      active ? "bg-white/15 text-gold" : "text-white/90"
+                    )}
+                    style={{
+                      transitionDelay: isOpen ? `${index * 50}ms` : "0ms",
+                      transform: isOpen ? "translateY(0)" : "translateY(-10px)",
+                      opacity: isOpen ? 1 : 0,
+                    }}
+                  >
+                    <span>{link.label}</span>
+                    <ChevronRight
+                      className={cn(
+                        "h-5 w-5 transition-all duration-300",
+                        active
+                          ? "text-gold"
+                          : "text-white/50 opacity-0 group-hover:opacity-100 group-hover:translate-x-1"
+                      )}
+                    />
+                  </Link>
+                );
+              })}
+            </div>
+          </nav>
+
+          {/* Mobile Register Button */}
+          <div className="p-4 border-t border-gold/20 bg-gradient-to-b from-transparent to-maroon-dark/50">
+            <Link to="/register-url/" onClick={() => setIsOpen(false)}>
+              <Button
+                size="lg"
+                className="w-full group bg-white text-maroon-dark hover:bg-gold hover:text-white border-2 border-gold shadow-lg hover:shadow-xl hover:shadow-gold/25 transition-all duration-300 font-bold"
+              >
+                <span className="flex items-center justify-center gap-2">
+                  <span>Register Now</span>
+                  <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
               </Button>
             </Link>
           </div>
-
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden text-white hover:bg-white/10 hover:text-gold"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in">
-            <div className="flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  onClick={() => setIsOpen(false)}
-                >
-                  <Button
-                    variant="ghost"
-                    className={cn(
-                      "w-full justify-start text-foreground/80 hover:text-primary font-semibold",
-                      location.pathname === link.href &&
-                        "bg-gradient-to-r from-maroon/15 to-secondary/15 text-primary border-l-4 border-maroon font-bold"
-                    )}
-                  >
-                    {link.label}
-                  </Button>
-                </Link>
-              ))}
-              <Link to="/register-url/" onClick={() => setIsOpen(false)}>
-                <Button variant="hero" className="w-full mt-2">
-                  Register Now
-                </Button>
-              </Link>
-            </div>
-          </div>
-        )}
       </div>
-    </nav>
+
+      {/* Backdrop Overlay */}
+      <div
+        className={cn(
+          "lg:hidden fixed inset-0 bg-black/40 backdrop-blur-sm transition-all duration-500 z-30",
+          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        )}
+        onClick={() => setIsOpen(false)}
+      />
+
+      {/* Spacer to prevent content jump */}
+      <div className="h-20 md:h-24" />
+    </>
   );
 };

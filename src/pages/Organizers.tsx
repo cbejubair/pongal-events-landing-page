@@ -53,33 +53,38 @@ const Organizers = () => {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary/10 to-background">
-          <div className="container mx-auto px-4 text-center">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Users className="h-4 w-4" />
+        <section className="py-20 gradient-hero relative overflow-hidden animate-fade-in">
+          <div className="absolute inset-0 kolam-pattern opacity-30" />
+          <div className="container mx-auto px-4 text-center relative z-10">
+            <div className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-sm text-maroon px-5 py-2.5 rounded-full text-sm font-bold mb-6 shadow-lg animate-bounce-in border-2 border-gold">
+              <Users className="h-5 w-5 text-gold" />
               Event Organizers
             </div>
-            <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h1 className="font-heading text-4xl md:text-6xl font-extrabold text-white mb-4 text-shadow-glow animate-slide-in-up">
               {clubInfo.name}
             </h1>
-            <p className="text-xl text-primary font-semibold mb-2">
+            <p className="text-xl md:text-2xl text-gold font-bold mb-3 animate-slide-in-up" style={{ animationDelay: '100ms' }}>
               {clubInfo.institution}
             </p>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-white/90 text-base md:text-lg max-w-2xl mx-auto leading-relaxed animate-slide-in-up" style={{ animationDelay: '200ms' }}>
               {clubInfo.description}
             </p>
           </div>
         </section>
 
         {/* Mission Section */}
-        <section className="py-12 bg-secondary/30">
+        <section className="py-16 bg-gradient-to-b from-background to-cream/50">
           <div className="container mx-auto px-4">
-            <Card className="border-primary/20 bg-background/80 backdrop-blur">
-              <CardContent className="p-8 text-center">
-                <h2 className="font-heading text-2xl font-bold text-foreground mb-4">
+            <Card className="border-3 border-maroon/30 bg-card shadow-2xl hover:shadow-glow transition-all duration-500 overflow-hidden relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-maroon/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <CardContent className="p-8 md:p-12 text-center relative z-10">
+                <div className="inline-block p-3 bg-gradient-to-br from-maroon to-maroon-dark rounded-2xl mb-6 shadow-lg">
+                  <Award className="h-8 w-8 text-gold" />
+                </div>
+                <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-gradient-pongal mb-6">
                   Our Mission
                 </h2>
-                <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+                <p className="text-foreground/80 text-base md:text-lg max-w-3xl mx-auto leading-relaxed font-medium">
                   {clubInfo.mission}
                 </p>
               </CardContent>
@@ -88,12 +93,15 @@ const Organizers = () => {
         </section>
 
         {/* Activities Section */}
-        <section className="py-16">
+        <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
-            <h2 className="font-heading text-3xl font-bold text-center text-foreground mb-12">
-              What We Do
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center mb-12">
+              <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-gradient-pongal mb-4">
+                What We Do
+              </h2>
+              <p className="text-foreground/70 text-base max-w-2xl mx-auto">Fostering creativity and celebrating Tamil culture through diverse activities</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {clubInfo.activities.map((activity, index) => (
                 <Card
                   key={index}

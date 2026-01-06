@@ -10,7 +10,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center gradient-hero overflow-hidden pt-16">
         {/* Kolam pattern overlay */}
-        <div className="absolute inset-0 kolam-pattern opacity-30" />
+        <div className="absolute inset-0 kolam-pattern opacity-40" />
         
         {/* Decorative elements */}
         <div className="absolute top-20 left-10 text-6xl animate-float opacity-80">🌾</div>
@@ -27,69 +27,71 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-secondary/20 text-secondary px-4 py-2 rounded-full mb-6 backdrop-blur-sm animate-fade-in">
-              <Sparkles className="h-4 w-4" />
-              <span className="text-sm font-medium">
-            </span>
+            <div className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-sm text-maroon-dark px-5 py-2.5 rounded-full mb-6 shadow-lg animate-bounce-in border-2 border-gold">
+              <Sparkles className="h-5 w-5 text-gold animate-pulse" />
+              <span className="text-sm font-bold tracking-wide">
+                தமிழ் திருவிழா 2026
+              </span>
             </div>
 
             {/* Title */}
-            <h1 className="font-heading text-5xl md:text-7xl font-bold text-secondary mb-4 animate-fade-in" style={{
+            <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-4 animate-slide-in-up text-shadow-glow hero-text-responsive" style={{
             animationDelay: '100ms'
           }}>
-              ​PPG PONGAL THIRUVIZHA'26    
-              <span className="block text-3xl md:text-4xl mt-2 text-primary-foreground/90">
-            </span>
+              PPG PONGAL THIRUVIZHA'26    
+              <span className="block text-3xl sm:text-4xl md:text-5xl mt-3 text-gold-light animate-shimmer">
+                போங்கல் திருவிழா
+              </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-xl md:text-2xl text-primary-foreground/80 mb-4 font-heading animate-fade-in" style={{
+            <p className="text-xl sm:text-2xl md:text-3xl text-white/95 mb-4 font-heading font-semibold animate-slide-in-up text-shadow-glow" style={{
             animationDelay: '200ms'
           }}>
               Celebrating Tamil Culture, Tradition & Talent
             </p>
 
             {/* Institution */}
-            <p className="text-lg text-primary-foreground/70 mb-8 animate-fade-in" style={{
+            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 font-medium animate-slide-in-up" style={{
             animationDelay: '300ms'
           }}>
               PPG Institute of Technology
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-zoom-in" style={{
             animationDelay: '400ms'
           }}>
               <Link to="/events">
-                <Button variant="hero" size="xl" className="min-w-[200px]">
+                <Button variant="hero" size="xl" className="min-w-[200px] text-base sm:text-lg font-extrabold">
                   View Events
                 </Button>
               </Link>
               <Link to="/register-url/">
-                <Button variant="heroOutline" size="xl" className="min-w-[200px]">
+                <Button variant="heroOutline" size="xl" className="min-w-[200px] text-base sm:text-lg font-extrabold bg-white/10 backdrop-blur-sm hover:bg-white/5">
                   Register Now
                 </Button>
               </Link>
             </div>
 
             {/* Event Info Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12animate-fade-in" style={{
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12 animate-slide-in-up" style={{
             animationDelay: '500ms'
           }}>
-              <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-4 border border-primary-foreground/20">
-                <Calendar className="h-6 w-6 text-secondary mx-auto mb-2" />
-                <p className="text-primary-foreground/90 font-medium">3 Days</p>
-                <p className="text-primary-foreground/60 text-sm">January 2026</p>
+              <div className="bg-white/95 backdrop-blur-md rounded-xl p-5 border-3 border-gold shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+                <Calendar className="h-7 w-7 text-maroon mx-auto mb-2" />
+                <p className="text-maroon-dark font-bold text-lg">3 Days</p>
+                <p className="text-foreground/70 text-sm font-semibold">January 2026</p>
               </div>
-              <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-4 border border-primary-foreground/20">
-                <Clock className="h-6 w-6 text-secondary mx-auto mb-2" />
-                <p className="text-primary-foreground/90 font-medium">1:20 PM – 4:45 PM</p>
-                <p className="text-primary-foreground/60 text-sm">Daily Schedule</p>
+              <div className="bg-white/95 backdrop-blur-md rounded-xl p-5 border-3 border-gold shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+                <Clock className="h-7 w-7 text-maroon mx-auto mb-2" />
+                <p className="text-maroon-dark font-bold text-lg">1:20 PM – 4:45 PM</p>
+                <p className="text-foreground/70 text-sm font-semibold">Daily Schedule</p>
               </div>
-              <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-4 border border-primary-foreground/20">
-                <MapPin className="h-6 w-6 text-secondary mx-auto mb-2" />
-                <p className="text-primary-foreground/90 font-medium">PPGIT Campus</p>
-                <p className="text-primary-foreground/60 text-sm">Coimbatore</p>
+              <div className="bg-white/95 backdrop-blur-md rounded-xl p-5 border-3 border-gold shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+                <MapPin className="h-7 w-7 text-maroon mx-auto mb-2" />
+                <p className="text-maroon-dark font-bold text-lg">PPGIT Campus</p>
+                <p className="text-foreground/70 text-sm font-semibold">Coimbatore</p>
               </div>
             </div>
           </div>
@@ -97,8 +99,8 @@ const Index = () => {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 rounded-full border-2 border-primary-foreground/50 flex items-start justify-center p-1">
-            <div className="w-1.5 h-3 bg-primary-foreground/50 rounded-full animate-pulse" />
+          <div className="w-6 h-10 rounded-full border-3 border-white/80 flex items-start justify-center p-1 shadow-lg">
+            <div className="w-1.5 h-3 bg-white/90 rounded-full animate-pulse" />
           </div>
         </div>
       </section>
@@ -137,85 +139,83 @@ const Index = () => {
       </section> */}
 
       {/* Highlights Section */}
-      <section className="py-20 bg-muted/50">
+      <section className="py-20 bg-gradient-to-b from-background to-cream/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-gradient-pongal mb-4">
               Event Highlights
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-foreground/80 text-lg max-w-2xl mx-auto font-semibold">
               Three days packed with cultural activities, creative competitions, and traditional games
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Day 1 */}
-            <div className="bg-card rounded-2xl p-6 shadow-card border-2 border-primary/20 hover:border-primary/40 transition-all hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                <span className="text-3xl">✍️</span>
+            <div className="bg-card rounded-2xl p-6 shadow-card border-3 border-maroon/30 hover:border-maroon hover:shadow-glow transition-all hover:-translate-y-2 duration-300">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-maroon to-maroon-light flex items-center justify-center mb-4 shadow-lg">
+                <span className="text-4xl">✍️</span>
               </div>
-              <h3 className="font-heading text-xl font-bold text-foreground mb-2">
+              <h3 className="font-heading text-2xl font-bold text-maroon mb-2">
                 Day 1: Language & Creativity
               </h3>
-              <p className="text-muted-foreground text-sm mb-4">
+              <p className="text-foreground/70 text-base mb-4 font-medium">
                 Rangoli, Thirukkural, Tamil poetry, and language challenges
               </p>
-              <div className="flex items-center gap-2 text-sm text-primary">
-                <Award className="h-4 w-4" />
+              <div className="flex items-center gap-2 text-sm text-maroon font-bold">
+                <Award className="h-5 w-5" />
                 <span>4 Events</span>
               </div>
             </div>
 
             {/* Day 2 */}
-            <div className="bg-card rounded-2xl p-6 shadow-card border-2 border-accent/20 hover:border-accent/40 transition-all hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                <span className="text-3xl">🎭</span>
+            <div className="bg-card rounded-2xl p-6 shadow-card border-3 border-maroon-medium/30 hover:border-maroon-medium hover:shadow-glow transition-all hover:-translate-y-2 duration-300">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-maroon-medium to-maroon-light flex items-center justify-center mb-4 shadow-lg">
+                <span className="text-4xl">🎭</span>
               </div>
-              <h3 className="font-heading text-xl font-bold text-foreground mb-2">
+              <h3 className="font-heading text-2xl font-bold text-maroon-medium mb-2">
                 Day 2: Expression & Performance
               </h3>
-              <p className="text-muted-foreground text-sm mb-4">
+              <p className="text-foreground/70 text-base mb-4 font-medium">
                 GEN Z Thirukkural, debates, Therukoothu, and poetry writing
               </p>
-              <div className="flex items-center gap-2 text-sm text-accent">
-                <Award className="h-4 w-4" />
+              <div className="flex items-center gap-2 text-sm text-maroon-medium font-bold">
+                <Award className="h-5 w-5" />
                 <span>4 Events</span>
               </div>
             </div>
 
             {/* Day 3 */}
-            <div className="bg-card rounded-2xl p-6 shadow-card border-2 border-secondary/20 hover:border-secondary/40 transition-all hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-xl bg-secondary/20 flex items-center justify-center mb-4">
-                <span className="text-3xl">🏆</span>
+            <div className="bg-card rounded-2xl p-6 shadow-card border-3 border-accent/30 hover:border-accent hover:shadow-glow transition-all hover:-translate-y-2 duration-300">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-gold flex items-center justify-center mb-4 shadow-lg">
+                <span className="text-4xl">🏆</span>
               </div>
-              <h3 className="font-heading text-xl font-bold text-foreground mb-2">
+              <h3 className="font-heading text-2xl font-bold text-accent mb-2">
                 Day 3: Games & Grand Finale
               </h3>
-              <p className="text-muted-foreground text-sm mb-4">
+              <p className="text-foreground/70 text-base mb-4 font-medium">
                 Pot painting, sack race, tug of war, and the festive Uriadi
               </p>
-              <div className="flex items-center gap-2 text-sm text-secondary-foreground">
-                <Award className="h-4 w-4" />
+              <div className="flex items-center gap-2 text-sm text-accent font-bold">
+                <Award className="h-5 w-5" />
                 <span>4 Events</span>
               </div>
             </div>
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-8 mt-16">
+          <div className="flex flex-wrap justify-center gap-12 mt-16">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-heading font-bold text-primary">12</div>
-              <div className="text-muted-foreground">Events</div>
+              <div className="text-5xl md:text-6xl font-heading font-extrabold text-gradient-pongal">12</div>
+              <div className="text-foreground/70 font-semibold text-lg mt-1">Events</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-heading font-bold text-accent">3</div>
-              <div className="text-muted-foreground">Days</div>
+              <div className="text-5xl md:text-6xl font-heading font-extrabold text-gradient-pongal">3</div>
+              <div className="text-foreground/70 font-semibold text-lg mt-1">Days</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-heading font-bold text-secondary-foreground">
-              <Users className="h-12 w-12 inline" />
-              </div>
-              <div className="text-muted-foreground">Countless Memories</div>
+              <Users className="h-16 w-16 mx-auto text-maroon mb-2" />
+              <div className="text-foreground/70 font-semibold text-lg">Countless Memories</div>
             </div>
           </div>
         </div>
@@ -223,23 +223,23 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="py-20 gradient-hero relative overflow-hidden">
-        <div className="absolute inset-0 kolam-pattern opacity-20 bg-[sidebar-primary-foreground] bg-black" />
+        <div className="absolute inset-0 kolam-pattern opacity-30" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-secondary mb-4">
+            <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-white mb-6 text-shadow-glow">
               Ready to Participate?
             </h2>
-            <p className="text-xl text-primary-foreground/80 mb-8">
+            <p className="text-xl md:text-2xl text-white/95 mb-8 font-semibold">
               Register now and be part of this grand celebration of Tamil culture!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/events">
-                <Button variant="heroOutline" size="xl" className="min-w-[180px]">
+                <Button variant="heroOutline" size="xl" className="min-w-[180px] bg-white/10 hover:bg-white/5 backdrop-blur-sm border-white text-white hover:text-white font-extrabold">
                   Browse Events
                 </Button>
               </Link>
               <Link to="/register-url/">
-                <Button variant="hero" size="xl" className="min-w-[180px]">
+                <Button variant="hero" size="xl" className="min-w-[180px] bg-white text-maroon hover:bg-white/95 shadow-2xl font-extrabold">
                   Register Now
                 </Button>
               </Link>

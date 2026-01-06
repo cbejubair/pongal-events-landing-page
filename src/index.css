@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Pongal traditional theme: maroon + brown + cream */
+    --background: 38 24% 98%; /* soft cream */
+    --foreground: 18 20% 12%; /* dark ink-like text */
+
+    /* Surfaces */
+    --card: 38 24% 100%;
+    --card-foreground: 18 20% 12%;
+
+    --popover: 38 24% 100%;
+    --popover-foreground: 18 20% 12%;
+
+    /* Primary: deep maroon */
+    --primary: 355 65% 30%; /* maroon */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: warm brown */
+    --secondary: 25 45% 28%; /* earthy brown */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent: saffron highlight */
+    --accent: 42 95% 55%; /* saffron */
+    --accent-foreground: 18 20% 12%;
+
+    --destructive: 12 85% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 25 40% 92%;
+    --input: 38 24% 98%;
+    --ring: 355 65% 40%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors */
+    --maroon: 355 65% 30%;
+    --brown: 25 45% 28%;
+    --saffron: 42 95% 55%;
+    --cream: 38 24% 98%;
+    --terracotta: 12 70% 45%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(120deg, hsl(var(--maroon)) 0%, hsl(var(--brown)) 50%, hsl(var(--saffron)) 100%);
+    --gradient-loop-1: linear-gradient(0deg, hsl(var(--maroon)) 0%, hsl(var(--saffron)) 50%, hsl(var(--brown)) 100%);
+
+    /* Shadows */
+    --shadow-warm: 0 8px 30px -8px hsl(var(--maroon) / 0.12);
+    --shadow-card: 0 8px 24px -8px hsl(18 20% 12% / 0.06);
+
+    /* Sidebar */
+    --sidebar-background: 38 24% 96%;
+    --sidebar-foreground: 18 20% 12%;
+    --sidebar-primary: 355 65% 30%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 42 95% 55%;
+    --sidebar-accent-foreground: 18 20% 12%;
+    --sidebar-border: 25 40% 92%;
+    --sidebar-ring: 355 65% 40%;
+  }
+
+  .dark {
+    --background: 240 10% 6%; /* dark base for dark mode */
+    --foreground: 0 0% 100%;
+
+    --card: 240 10% 10%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 240 10% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 355 65% 45%;
+    --primary-foreground: 240 10% 6%;
+
+    --secondary: 25 45% 30%;
+    --secondary-foreground: 240 10% 6%;
+
+    --muted: 240 12% 8%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 42 95% 55%;
+    --accent-foreground: 240 10% 6%;
+
+    --destructive: 12 85% 55%;
+    --destructive-foreground: 240 10% 6%;
+
+    --border: 240 12% 14%;
+    --input: 240 12% 14%;
+    --ring: 355 65% 45%;
+
+    --sidebar-background: 240 10% 6%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 355 65% 45%;
+    --sidebar-primary-foreground: 240 10% 6%;
+    --sidebar-accent: 42 95% 55%;
+    --sidebar-accent-foreground: 240 10% 6%;
+    --sidebar-border: 240 12% 14%;
+    --sidebar-ring: 355 65% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .kolam-pattern {
+    background-image: radial-gradient(circle at 1px 1px, hsl(var(--maroon) / 0.12) 1px, transparent 0),
+      radial-gradient(circle at 12px 12px, hsl(var(--saffron) / 0.04) 1px, transparent 0);
+    background-size: 20px 20px;
+    opacity: 0.18;
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+    background-size: 400% 400%;
+    animation: gradient-loop 12s linear infinite;
+  }
+
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .text-gradient-festive {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--gold) / 0) 0%,
+      hsl(var(--gold) / 0.3) 50%,
+      hsl(var(--gold) / 0) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .gradient-loop {
+    background: var(--gradient-loop-1);
+    background-size: 300% 300%;
+    animation: gradient-loop 10s ease-in-out infinite;
+  }
+
+  @keyframes gradient-loop {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}

@@ -37,10 +37,10 @@ export const Navbar = () => {
         <nav
           className={cn(
             "relative rounded-2xl border-2 transition-all duration-500",
-            "bg-gradient-to-r from-maroon-dark/98 via-maroon/98 to-maroon-dark/98 backdrop-blur-2xl",
-            "border-gold/50",
-            "shadow-2xl shadow-maroon/30",
-            scrolled && "shadow-2xl shadow-maroon/50 border-gold/70"
+            "bg-maroon-dark text-white",
+            "border-gold/60",
+            "shadow-2xl shadow-maroon/40",
+            scrolled && "shadow-2xl shadow-maroon/60 border-gold/80"
           )}
         >
           <div className="flex h-16 md:h-18 items-center justify-between px-4 md:px-6 lg:px-8">
@@ -125,8 +125,8 @@ export const Navbar = () => {
       >
         <div
           className={cn(
-            "rounded-2xl border-2 bg-maroon-dark/98 backdrop-blur-2xl shadow-2xl overflow-hidden",
-            "border-gold/50",
+            "rounded-2xl border-2 bg-maroon-dark text-white shadow-2xl overflow-hidden",
+            "border-gold/60",
             "transform transition-all duration-500 origin-top",
             isOpen ? "scale-y-100" : "scale-y-0"
           )}

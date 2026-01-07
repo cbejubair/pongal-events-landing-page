@@ -19,6 +19,7 @@ const dayColors = {
     glow: "hover:shadow-maroon/20",
     text: "text-maroon",
     bg: "bg-maroon",
+    team: "bg-gold/10 text-gold border-gold/40",
   },
   2: {
     badge: "bg-maroon-medium/10 text-maroon-medium border-maroon-medium/30",
@@ -27,14 +28,16 @@ const dayColors = {
     glow: "hover:shadow-maroon-medium/20",
     text: "text-maroon-medium",
     bg: "bg-maroon-medium",
+    team: "bg-gold/10 text-gold border-gold/40",
   },
   3: {
-    badge: "bg-gold/10 text-gold border-gold/30",
-    border: "border-gold/20 hover:border-gold/60",
-    accent: "from-gold to-gold-light",
-    glow: "hover:shadow-gold/20",
-    text: "text-gold",
-    bg: "bg-gold",
+    badge: "bg-maroon-medium/10 text-maroon-medium border-maroon-medium/30",
+    border: "border-maroon-medium/20 hover:border-maroon-medium/60",
+    accent: "from-maroon-medium to-maroon",
+    glow: "hover:shadow-maroon-medium/20",
+    text: "text-maroon-medium",
+    bg: "bg-maroon-medium",
+    team: "bg-gold/10 text-gold border-gold/40",
   },
 };
 
@@ -102,7 +105,7 @@ export const EventCard = ({ event, index }: EventCardProps) => {
                   className={cn(
                     "text-xs font-semibold",
                     event.isTeamEvent
-                      ? "bg-gold/10 text-gold border-gold/40"
+                      ? "bg-muted text-muted-foreground border-muted-foreground/30"
                       : "bg-muted text-muted-foreground border-muted-foreground/30"
                   )}
                 >
@@ -134,7 +137,7 @@ export const EventCard = ({ event, index }: EventCardProps) => {
             </p>
 
             {/* Actions */}
-            <div className="mt-4 space-y-2">
+            <div className="flex-shrink-0 space-y-2 mt-4">
               {event.formUrl ? (
                 <a
                   href={event.formUrl}
@@ -241,7 +244,7 @@ export const EventCard = ({ event, index }: EventCardProps) => {
             <div className="h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent mb-3" />
 
             {/* Actions */}
-            <div className="flex-shrink-0 space-y-2">
+            <div className="space-y-2">
               {event.formUrl ? (
                 <a
                   href={event.formUrl}

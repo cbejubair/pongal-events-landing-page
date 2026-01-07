@@ -6,7 +6,7 @@ const Index = () => {
   return <div className="min-h-screen flex flex-col">
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center gradient-hero overflow-hidden pt-16">
+      <section className="relative min-h-[100vh] flex items-center justify-center gradient-hero overflow-hidden pt-16">
         {/* Kolam pattern overlay */}
         <div className="absolute inset-0 kolam-pattern opacity-40" />
         
@@ -77,7 +77,7 @@ const Index = () => {
             </div>
 
             {/* Event Info Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12 animate-slide-in-up" style={{
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12 mb-12 animate-slide-in-up" style={{
             animationDelay: '500ms'
           }}>
               <div className="bg-white/95 backdrop-blur-md rounded-xl p-5 border-3 border-gold shadow-xl hover:shadow-2xl transition-all hover:scale-105">
@@ -342,65 +342,74 @@ const Index = () => {
         <div className="absolute inset-0 kolam-pattern opacity-20" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-gradient-pongal mb-4">
-              Upcoming Events
-            </h2>
-            <p className="text-foreground/80 text-lg max-w-2xl mx-auto font-semibold">
-              Mark your calendars for exciting events coming soon
-            </p>
+        <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-gradient-pongal mb-4">
+          Upcoming Events
+        </h2>
+        <p className="text-foreground/80 text-lg max-w-2xl mx-auto font-semibold">
+          Mark your calendars for exciting events coming soon
+        </p>
           </div>
 
-          <div className="max-w-3xl mx-auto">
-            {/* MASS'26 Event Card */}
-            <div className="relative group h-96 rounded-3xl overflow-hidden shadow-2xl hover:shadow-glow transition-all duration-500 hover:-translate-y-4">
-              {/* Animated Background Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400" style={{
-                animation: 'gradient-xy 15s ease infinite',
-                backgroundSize: '200% 200%'
-              }} />
-              
-              {/* Glowing Border Effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 rounded-3xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
-              
-              {/* Content Card */}
-              <div className="relative h-full bg-gradient-to-br from-maroon-dark/95 to-maroon/90 backdrop-blur-xl rounded-3xl p-8 md:p-12 flex flex-col justify-center items-center overflow-hidden">
-                {/* Decorative Elements */}
-                <div className="absolute top-8 right-8 text-8xl opacity-20 animate-float">✨</div>
-                <div className="absolute bottom-8 left-8 text-8xl opacity-20 animate-float" style={{ animationDelay: '1s' }}>🎭</div>
-                
-                {/* Main Content */}
-                <div className="relative z-10 text-center">
-                  {/* Badge */}
-                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-gold to-gold-light text-maroon px-6 py-2 rounded-full mb-6 shadow-lg font-bold text-sm animate-bounce">
-                    <Sparkles className="h-5 w-5" />
-                    Coming Soon
-                  </div>
-
-                  {/* Event Name */}
-                  <h3 className="font-heading text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-gold mb-4 animate-pulse">
-                    MASS'26
-                  </h3>
-
-                  {/* Tagline */}
-                  <p className="text-2xl md:text-3xl font-bold text-white mb-8 text-shadow-glow font-heading tracking-wide">
-                    BIGGER. GREATER. GRANDER.
-                  </p>
-
-                  {/* Description */}
-                  <p className="text-white/90 text-base md:text-lg mb-8 max-w-xl mx-auto leading-relaxed">
-                    Get ready for an extraordinary event that promises to be bigger, greater, and grander than ever before. An unmissable celebration awaits!
-                  </p>
-
-                  {/* CTA Button */}
-                  <button className="group/btn relative px-8 py-3 bg-white text-maroon-dark font-bold rounded-full hover:bg-gold hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-gold/50 overflow-hidden">
-                    <span className="relative z-10 flex items-center gap-2 justify-center">
-                      Stay Updated
-                      <ChevronRight className="h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
-                    </span>
-                  </button>
-                </div>
-              </div>
+          <div className="max-w-4xl mx-auto">
+        {/* MASS'26 Event Card */}
+        <div className="relative group rounded-3xl overflow-hidden shadow-2xl hover:shadow-glow transition-all duration-500 hover:-translate-y-2">
+          {/* Glowing Border Effect */}
+          <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 rounded-3xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-500" />
+          
+          {/* Content Card */}
+          <div className="relative bg-gradient-to-br from-maroon-dark/95 to-maroon/90 backdrop-blur-xl rounded-3xl p-8 md:p-16 overflow-hidden">
+            {/* Animated Background Pattern */}
+            <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle, rgba(255,215,0,0.3) 1px, transparent 1px)',
+            backgroundSize: '50px 50px'
+          }} />
             </div>
+
+            {/* Decorative Elements */}
+            <div className="absolute -top-10 -right-10 text-9xl opacity-10 animate-float">✨</div>
+            <div className="absolute -bottom-10 -left-10 text-9xl opacity-10 animate-float" style={{ animationDelay: '1s' }}>🎭</div>
+            <div className="absolute top-1/2 right-1/4 text-7xl opacity-5 animate-float" style={{ animationDelay: '2s' }}>🎪</div>
+            
+            {/* Main Content */}
+            <div className="relative z-10 text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-gold to-gold-light text-maroon px-6 py-2.5 rounded-full mb-8 shadow-lg font-bold text-sm animate-bounce-in border-2 border-white/20">
+            <Sparkles className="h-5 w-5 animate-pulse" />
+            Coming Soon
+          </div>
+
+          {/* Event Name with Enhanced Styling */}
+          <h3 className="font-heading text-6xl md:text-8xl lg:text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-white mb-6 animate-shimmer tracking-tight">
+            MASS'26
+          </h3>
+
+          {/* Tagline with Letter Spacing */}
+          <p className="text-2xl md:text-4xl font-bold text-white mb-10 text-shadow-glow font-heading tracking-widest animate-pulse">
+            BIGGER • GREATER • GRANDER
+          </p>
+
+          {/* Description with Better Spacing */}
+          <p className="text-white/90 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed font-medium">
+            Get ready for an extraordinary celebration that promises to redefine grandeur. 
+            An unmissable experience awaits that will leave you spellbound!
+          </p>
+
+          {/* Info Pills */}
+          <div className="flex flex-wrap justify-center gap-4 mt-10">
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-white font-semibold">
+              🗓️ Date TBA
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-white font-semibold">
+              📍 PPGIT Campus
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-white font-semibold">
+              🎉 Grand Scale
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
           </div>
         </div>
       </section>

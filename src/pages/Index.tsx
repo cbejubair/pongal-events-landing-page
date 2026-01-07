@@ -140,6 +140,83 @@ const Index = () => {
         </div>
       </section> */}
 
+      {/* Upcoming Events Section */}
+      <section className="py-20 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 kolam-pattern opacity-20" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-12">
+        <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-gradient-pongal mb-4">
+          Upcoming Events
+        </h2>
+        <p className="text-foreground/80 text-lg max-w-2xl mx-auto font-semibold">
+          Mark your calendars for exciting events coming soon
+        </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+        {/* MASS'26 Event Card */}
+        <div className="relative group rounded-3xl overflow-hidden shadow-2xl hover:shadow-glow transition-all duration-500 hover:-translate-y-2">
+          {/* Glowing Border Effect */}
+          <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 rounded-3xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-500" />
+          
+          {/* Content Card */}
+          <div className="relative bg-gradient-to-br from-maroon-dark/95 to-maroon/90 backdrop-blur-xl rounded-3xl p-8 md:p-16 overflow-hidden">
+            {/* Animated Background Pattern */}
+            <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle, rgba(255,215,0,0.3) 1px, transparent 1px)',
+            backgroundSize: '50px 50px'
+          }} />
+            </div>
+
+            {/* Decorative Elements */}
+            <div className="absolute -top-10 -right-10 text-9xl opacity-10 animate-float">✨</div>
+            <div className="absolute -bottom-10 -left-10 text-9xl opacity-10 animate-float" style={{ animationDelay: '1s' }}>🎭</div>
+            <div className="absolute top-1/2 right-1/4 text-7xl opacity-5 animate-float" style={{ animationDelay: '2s' }}>🎪</div>
+            
+            {/* Main Content */}
+            <div className="relative z-10 text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-gold to-gold-light text-maroon px-6 py-2.5 rounded-full mb-8 shadow-lg font-bold text-sm animate-bounce-in border-2 border-white/20">
+            <Sparkles className="h-5 w-5 animate-pulse" />
+            Coming Soon
+          </div>
+
+          {/* Event Name with Enhanced Styling */}
+          <h3 className="font-heading text-6xl md:text-8xl lg:text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-white mb-6 animate-shimmer tracking-tight">
+            MASS 2K26
+          </h3>
+
+          {/* Tagline with Letter Spacing */}
+          <p className="text-2xl md:text-4xl font-bold text-white mb-10 text-shadow-glow font-heading tracking-widest animate-pulse">
+            BIGGER • GREATER • GRANDER
+          </p>
+
+          {/* Description with Better Spacing */}
+          <p className="text-white/90 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed font-medium">
+            Get ready for an extraordinary celebration that promises to redefine grandeur. 
+            An unmissable experience awaits that will leave you spellbound!
+          </p>
+
+          {/* Info Pills */}
+          <div className="flex flex-wrap justify-center gap-4 mt-10">
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-white font-semibold">
+              🗓️ Date TBA
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-white font-semibold">
+              📍 PPGIT Campus
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-white font-semibold">
+              🎉 Grand Scale
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+      </section>
+
       {/* Highlights Section */}
       <section className="py-20 bg-gradient-to-b from-background to-cream/50">
         <div className="container mx-auto px-4">
@@ -191,18 +268,18 @@ const Index = () => {
             </div>
 
             {/* Day 3 */}
-            <div className="bg-card rounded-2xl p-6 shadow-card border-3 border-accent/30 hover:border-accent hover:shadow-glow transition-all hover:-translate-y-2 duration-300">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-gold flex items-center justify-center mb-4 shadow-lg">
+            <div className="bg-card rounded-2xl p-6 shadow-card border-3 border-maroon-medium/30 hover:border-maroon-medium hover:shadow-glow transition-all hover:-translate-y-2 duration-300">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-maroon-medium to-gold flex items-center justify-center mb-4 shadow-lg">
                 <span className="text-4xl">🏆</span>
               </div>
-              <h3 className="font-heading text-2xl font-bold text-accent mb-2">
+              <h3 className="font-heading text-2xl font-bold text-maroon-medium mb-2">
                 Day 3: Games & Grand Finale
               </h3>
               <p className="text-foreground/70 text-base mb-4 font-medium">
                 Experience energetic sack races, thrilling tug of war battles, 
                 and the exciting Uriadi pot-breaking finale
               </p>
-              <div className="flex items-center gap-2 text-sm text-accent font-bold">
+              <div className="flex items-center gap-2 text-sm text-maroon-medium font-bold">
                 <Award className="h-5 w-5" />
                 <span>3 Events</span>
               </div>
@@ -337,82 +414,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Upcoming Events Section */}
-      <section className="py-20 bg-background relative overflow-hidden">
-        <div className="absolute inset-0 kolam-pattern opacity-20" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-12">
-        <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-gradient-pongal mb-4">
-          Upcoming Events
-        </h2>
-        <p className="text-foreground/80 text-lg max-w-2xl mx-auto font-semibold">
-          Mark your calendars for exciting events coming soon
-        </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-        {/* MASS'26 Event Card */}
-        <div className="relative group rounded-3xl overflow-hidden shadow-2xl hover:shadow-glow transition-all duration-500 hover:-translate-y-2">
-          {/* Glowing Border Effect */}
-          <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 rounded-3xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-500" />
-          
-          {/* Content Card */}
-          <div className="relative bg-gradient-to-br from-maroon-dark/95 to-maroon/90 backdrop-blur-xl rounded-3xl p-8 md:p-16 overflow-hidden">
-            {/* Animated Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle, rgba(255,215,0,0.3) 1px, transparent 1px)',
-            backgroundSize: '50px 50px'
-          }} />
-            </div>
-
-            {/* Decorative Elements */}
-            <div className="absolute -top-10 -right-10 text-9xl opacity-10 animate-float">✨</div>
-            <div className="absolute -bottom-10 -left-10 text-9xl opacity-10 animate-float" style={{ animationDelay: '1s' }}>🎭</div>
-            <div className="absolute top-1/2 right-1/4 text-7xl opacity-5 animate-float" style={{ animationDelay: '2s' }}>🎪</div>
-            
-            {/* Main Content */}
-            <div className="relative z-10 text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-gold to-gold-light text-maroon px-6 py-2.5 rounded-full mb-8 shadow-lg font-bold text-sm animate-bounce-in border-2 border-white/20">
-            <Sparkles className="h-5 w-5 animate-pulse" />
-            Coming Soon
-          </div>
-
-          {/* Event Name with Enhanced Styling */}
-          <h3 className="font-heading text-6xl md:text-8xl lg:text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-white mb-6 animate-shimmer tracking-tight">
-            MASS'26
-          </h3>
-
-          {/* Tagline with Letter Spacing */}
-          <p className="text-2xl md:text-4xl font-bold text-white mb-10 text-shadow-glow font-heading tracking-widest animate-pulse">
-            BIGGER • GREATER • GRANDER
-          </p>
-
-          {/* Description with Better Spacing */}
-          <p className="text-white/90 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed font-medium">
-            Get ready for an extraordinary celebration that promises to redefine grandeur. 
-            An unmissable experience awaits that will leave you spellbound!
-          </p>
-
-          {/* Info Pills */}
-          <div className="flex flex-wrap justify-center gap-4 mt-10">
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-white font-semibold">
-              🗓️ Date TBA
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-white font-semibold">
-              📍 PPGIT Campus
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-white font-semibold">
-              🎉 Grand Scale
-            </div>
-          </div>
-            </div>
-          </div>
-        </div>
-          </div>
-        </div>
-      </section>
+      
 
       <Footer />
     </div>;

@@ -36,11 +36,11 @@ export const Navbar = () => {
       >
         <nav
           className={cn(
-            "relative rounded-2xl border transition-all duration-500",
-            "bg-gradient-to-r from-maroon-dark/95 via-maroon/95 to-maroon-dark/95 backdrop-blur-xl",
-            "border-gold/30",
-            "shadow-lg shadow-black/20",
-            scrolled && "shadow-2xl shadow-black/30"
+            "relative rounded-2xl border-2 transition-all duration-500",
+            "bg-gradient-to-r from-maroon-dark/98 via-maroon/98 to-maroon-dark/98 backdrop-blur-2xl",
+            "border-gold/50",
+            "shadow-2xl shadow-maroon/30",
+            scrolled && "shadow-2xl shadow-maroon/50 border-gold/70"
           )}
         >
           <div className="flex h-16 md:h-18 items-center justify-between px-4 md:px-6 lg:px-8">
@@ -53,10 +53,10 @@ export const Navbar = () => {
                 </span>
               </div>
               <div className="flex flex-col">
-                <span className="font-heading font-extrabold bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent text-lg md:text-xl leading-tight group-hover:scale-105 transition-transform">
+                <span className="font-heading font-extrabold bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent text-lg md:text-xl leading-tight group-hover:scale-105 transition-transform drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Pongal 2026
                 </span>
-                <span className="text-[10px] text-white/90 leading-tight font-semibold tracking-wide">
+                <span className="text-[10px] text-white leading-tight font-bold tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
                   PPG Institute of Technology
                 </span>
               </div>
@@ -71,9 +71,9 @@ export const Navbar = () => {
                     <Button
                       variant="ghost"
                       className={cn(
-                        "relative px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300",
+                        "relative px-4 py-2 text-sm font-bold rounded-lg transition-all duration-300",
                         "hover:bg-white/10 hover:text-gold",
-                        active ? "text-gold bg-white/15" : "text-white/90"
+                        active ? "text-gold bg-white/15 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" : "text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]"
                       )}
                     >
                       {link.label}
@@ -125,8 +125,8 @@ export const Navbar = () => {
       >
         <div
           className={cn(
-            "rounded-2xl border bg-maroon-dark/95 backdrop-blur-xl shadow-2xl overflow-hidden",
-            "border-gold/30",
+            "rounded-2xl border-2 bg-maroon-dark/98 backdrop-blur-2xl shadow-2xl overflow-hidden",
+            "border-gold/50",
             "transform transition-all duration-500 origin-top",
             isOpen ? "scale-y-100" : "scale-y-0"
           )}
@@ -142,9 +142,9 @@ export const Navbar = () => {
                     to={link.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      "flex items-center justify-between p-4 rounded-xl font-semibold transition-all duration-300 group",
+                      "flex items-center justify-between p-4 rounded-xl font-bold transition-all duration-300 group",
                       "hover:bg-white/10",
-                      active ? "bg-white/15 text-gold" : "text-white/90"
+                      active ? "bg-white/15 text-gold drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" : "text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]"
                     )}
                     style={{
                       transitionDelay: isOpen ? `${index * 50}ms` : "0ms",

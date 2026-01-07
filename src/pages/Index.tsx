@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Calendar, Clock, MapPin, Users, Sparkles, Award } from "lucide-react";
+import { Calendar, Clock, MapPin, Users, Sparkles, Award, ChevronRight } from "lucide-react";
 const Index = () => {
   return <div className="min-h-screen flex flex-col">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center gradient-hero overflow-hidden pt-16">
@@ -165,12 +163,12 @@ const Index = () => {
                 Day 1: Language & Creativity
               </h3>
               <p className="text-foreground/70 text-base mb-4 font-medium">
-                Celebrate the beauty of Tamil language through vibrant Rangoli art, timeless Thirukkural wisdom, 
-                soulful poetry, and engaging linguistic challenges
+                Celebrate the beauty of Tamil language through poetry composition, storytelling excellence, 
+                and modern interpretations of timeless Thirukkural wisdom
               </p>
               <div className="flex items-center gap-2 text-sm text-maroon font-bold">
                 <Award className="h-5 w-5" />
-                <span>4 Events</span>
+                <span>3 Events</span>
               </div>
             </div>
 
@@ -183,12 +181,12 @@ const Index = () => {
                 Day 2: Expression & Performance
               </h3>
               <p className="text-foreground/70 text-base mb-4 font-medium">
-                Witness modern interpretations with GEN Z Thirukkural, engaging debates, traditional 
-                Therukoothu street theater, and creative poetry composition
+                Engage in thought-provoking debates, experience vibrant Therukoothu street theatre, 
+                and unleash creativity with traditional Manpanai pot painting
               </p>
               <div className="flex items-center gap-2 text-sm text-maroon-medium font-bold">
                 <Award className="h-5 w-5" />
-                <span>4 Events</span>
+                <span>3 Events</span>
               </div>
             </div>
 
@@ -201,12 +199,12 @@ const Index = () => {
                 Day 3: Games & Grand Finale
               </h3>
               <p className="text-foreground/70 text-base mb-4 font-medium">
-                Experience traditional games including artistic pot painting, energetic sack races, 
-                thrilling tug of war, and the exciting Uriadi finale
+                Experience energetic sack races, thrilling tug of war battles, 
+                and the exciting Uriadi pot-breaking finale
               </p>
               <div className="flex items-center gap-2 text-sm text-accent font-bold">
                 <Award className="h-5 w-5" />
-                <span>4 Events</span>
+                <span>3 Events</span>
               </div>
             </div>
           </div>
@@ -214,7 +212,7 @@ const Index = () => {
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-12 mt-16">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-heading font-extrabold text-gradient-pongal">10</div>
+              <div className="text-5xl md:text-6xl font-heading font-extrabold text-gradient-pongal">9</div>
               <div className="text-foreground/70 font-semibold text-lg mt-1">Events</div>
             </div>
             <div className="text-center">

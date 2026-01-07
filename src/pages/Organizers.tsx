@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Palette, Music, Award, Instagram, Linkedin } from "lucide-react";
@@ -53,9 +52,7 @@ const studentCoordinator = {
 const Organizers = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
-
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
         <section className="py-20 gradient-hero relative overflow-hidden animate-fade-in">
           <div className="absolute inset-0 kolam-pattern opacity-30" />

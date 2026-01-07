@@ -4,9 +4,9 @@ import { Navbar } from "./Navbar";
 
 const Layout = ({}: PropsWithChildren) => {
   return (
-    <div>run
+    <div>
       <Navbar />
-      <main className="pt-16">
+      <main>
         <Outlet />
       </main>
     </div>

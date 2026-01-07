@@ -1,11 +1,9 @@
-import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { RegistrationForm } from "@/components/RegistrationForm";
 
 const Register = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
 
       {/* Header */}
       <section className="pt-24 pb-12 gradient-hero relative overflow-hidden">

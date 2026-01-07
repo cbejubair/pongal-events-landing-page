@@ -34,8 +34,8 @@ export const Footer = () => {
                 <p className="text-white/70 text-xs">3 Days</p>
               </div>
               <div className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-gold/30">
-                <p className="text-gold font-bold text-sm">1:20 - 4:45 PM</p>
-                <p className="text-white/70 text-xs">Daily</p>
+                <p className="text-gold font-bold text-sm">3 Days</p>
+                <p className="text-white/70 text-xs">Celebration</p>
               </div>
             </div>
           </div>

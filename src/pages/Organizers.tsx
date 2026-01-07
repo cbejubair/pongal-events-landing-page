@@ -42,9 +42,13 @@ const clubInfo = {
 };
 
 const staffCoordinators = [
-  { name: "Dr. Tamil Selvan", role: "Faculty Coordinator" },
-  { name: "Arun Kumar", role: "Staff Coordinator" },
+  { name: "Dr. NithyaPrakash", role: "Staff Coordinator [Fine Arts Club]" },
 ];
+
+const studentCoordinator = {
+  name: "Mohammed Jubair A",
+  role: "Student Coordinator [Fine Arts Club]",
+};
 
 const Organizers = () => {
   return (
@@ -130,7 +134,7 @@ const Organizers = () => {
             <h2 className="font-heading text-3xl font-bold text-center text-foreground mb-8">
               Staff Coordinators
             </h2>
-            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div className="grid md:grid-cols-1 gap-6 max-w-md mx-auto">
               {staffCoordinators.map((member, index) => (
                 <Card key={index} className="border-border/50 hover:shadow-lg transition-shadow">
                   <CardContent className="p-6 text-center">
@@ -153,39 +157,74 @@ const Organizers = () => {
           </div>
         </section>
 
-        {/* Designed & Developed */}
-        <section className="py-12">
-          <div className="container mx-auto px-4 text-center">
-            <h3 className="font-heading text-xl font-semibold text-foreground mb-4">
-              Designed and developed by
-            </h3>
-            <div className="max-w-md mx-auto my-6">
-              <img
-                src="/img/jb.jpg"
-                alt="Designed and developed by"
-                className="w-full rounded-md shadow-md"
-              />
+        {/* Student Coordinator */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <h2 className="font-heading text-3xl font-bold text-center text-foreground mb-8">
+              Student Coordinator
+            </h2>
+            <div className="grid md:grid-cols-1 gap-6 max-w-md mx-auto">
+              <Card className="border-border/50 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl font-bold text-primary-foreground">
+                      {studentCoordinator.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
+                    </span>
+                  </div>
+                  <h3 className="font-heading font-semibold text-foreground">
+                    {studentCoordinator.name}
+                  </h3>
+                  <p className="text-sm text-primary font-medium">{studentCoordinator.role}</p>
+                </CardContent>
+              </Card>
             </div>
-            <div className="flex flex-col items-center gap-4">
-              <p className="text-foreground font-medium">Hey Let's Connect</p>
-              <div className="flex items-center gap-4">
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  <Instagram className="h-6 w-6" />
-                </a>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  <Linkedin className="h-6 w-6" />
-                </a>
-              </div>
+          </div>
+        </section>
+
+        {/* Event Coordinators */}
+        <section className="py-16 bg-gradient-to-t from-primary/5 to-background">
+          <div className="container mx-auto px-4">
+            <h2 className="font-heading text-3xl font-bold text-center text-foreground mb-8">
+              Event Coordinators
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
+              {[
+                "Dinesh",
+                "Nandhan",
+                "Nithya shree PG",
+                "Pradeepa",
+                "Praveen",
+                "Rashika",
+                "Rishikanth",
+                "Sandhya S",
+                "Sanjay S",
+                "Sanjay SK",
+                "Srisaran",
+                "Tharshini Sri",
+                "Thiruarasi",
+                "Nitheesh",
+                "Vivek S",
+              ].map((name, index) => (
+                <Card key={index} className="border-border/50 hover:shadow-lg transition-shadow">
+                  <CardContent className="p-4 text-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-lg font-bold text-primary-foreground text-center px-1">
+                        {name
+                          .split(" ")
+                          .map((n) => n[0])
+                          .join("")}
+                      </span>
+                    </div>
+                    <h3 className="font-heading font-semibold text-foreground text-sm">
+                      {name}
+                    </h3>
+                    <p className="text-xs text-primary font-medium mt-1">Event Coordinator</p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>

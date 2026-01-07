@@ -49,7 +49,7 @@ const Events = () => {
             {/* Badge with pulse effect */}
             <div className="inline-flex items-center gap-3 bg-white text-maroon px-6 py-3 rounded-full text-sm font-bold mb-8 shadow-2xl animate-bounce-in border-2 border-gold/50 hover:border-gold transition-all duration-300 hover:scale-105 cursor-default">
               <span className="text-2xl animate-pulse">🎉</span>
-              <span className="tracking-wide">12 Amazing Events</span>
+              <span className="tracking-wide">10 Amazing Events</span>
               <div className="w-2 h-2 rounded-full bg-gold animate-pulse" />
             </div>
             
@@ -62,14 +62,14 @@ const Events = () => {
             
             {/* Subtitle with better spacing */}
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 font-semibold mb-8 animate-slide-in-up leading-relaxed px-4" style={{ animationDelay: '100ms' }}>
-              Explore all 12 exciting events across 3 days of celebration
+              Explore all 10 exciting events across 3 days of celebration
             </p>
             
             {/* Quick stats */}
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6 animate-zoom-in" style={{ animationDelay: '200ms' }}>
               {[
                 { label: '3 Days', icon: '📅' },
-                { label: '12 Events', icon: '🎪' },
+                { label: '10 Events', icon: '🎪' },
                 { label: 'Cultural Heritage', icon: '🎭' }
               ].map((stat, idx) => (
                 <div 

@@ -84,19 +84,6 @@ export const Navbar = () => {
                   </Link>
                 );
               })}
-
-              {/* Desktop Register Button */}
-              <Link to="/register-url/">
-                <Button
-                  size="sm"
-                  className="ml-4 group relative overflow-hidden bg-white text-maroon-dark border-2 border-gold hover:bg-gold hover:text-white shadow-lg hover:shadow-2xl hover:shadow-gold/25 transition-all duration-300 font-bold"
-                >
-                  <span className="flex items-center gap-2">
-                    <span>Register Now</span>
-                    <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </Button>
-              </Link>
             </div>
 
             {/* Mobile Menu Toggle */}
@@ -179,21 +166,6 @@ export const Navbar = () => {
               })}
             </div>
           </nav>
-
-          {/* Mobile Register Button */}
-          <div className="p-4 border-t border-gold/20 bg-gradient-to-b from-transparent to-maroon-dark/50">
-            <Link to="/register-url/" onClick={() => setIsOpen(false)}>
-              <Button
-                size="lg"
-                className="w-full group bg-white text-maroon-dark hover:bg-gold hover:text-white border-2 border-gold shadow-lg hover:shadow-xl hover:shadow-gold/25 transition-all duration-300 font-bold"
-              >
-                <span className="flex items-center justify-center gap-2">
-                  <span>Register Now</span>
-                  <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </span>
-              </Button>
-            </Link>
-          </div>
         </div>
       </div>
 

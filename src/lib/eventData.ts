@@ -12,14 +12,14 @@ export interface PongalEvent {
 export const pongalEvents: PongalEvent[] = [
   // Day 1 – Language & Creativity
   {
-    id: 1,
-    name: "Rangoli Competition",
+    id: 5,
+    name: "GEN Z Thirukkural",
     day: 1,
     category: "Language & Creativity",
-    description: "Showcase your artistic skills by creating beautiful traditional kolam designs using colorful powders.",
-    icon: "🎨",
+    description: "Write your own modern Thirukkural! Create meaningful couplets relevant to today's generation.",
+    icon: "💡",
     isTeamEvent: false,
-    formUrl: "https://forms.gle/t7CMbgJeV52WAjHq9",
+    formUrl: "https://forms.gle/7y7AVMbsvjEbTW7i6",
   },
   {
     id: 3,
@@ -43,14 +43,14 @@ export const pongalEvents: PongalEvent[] = [
 
   // Day 2 – Expression & Performance
   {
-    id: 5,
-    name: "GEN Z Thirukkural",
+    id: 1,
+    name: "Rangoli Competition",
     day: 2,
     category: "Expression & Performance",
-    description: "Write your own modern Thirukkural! Create meaningful couplets relevant to today's generation.",
-    icon: "💡",
+    description: "Showcase your artistic skills by creating beautiful traditional kolam designs using colorful powders.",
+    icon: "🎨",
     isTeamEvent: false,
-    formUrl: "https://forms.gle/7y7AVMbsvjEbTW7i6",
+    formUrl: "https://forms.gle/t7CMbgJeV52WAjHq9",
   },
   {
     id: 6,
@@ -121,17 +121,17 @@ export const pongalEvents: PongalEvent[] = [
 export const dayInfo = {
   1: {
     title: "Day 1",
-    subtitle: "Language & Creativity",
+    subtitle: "Language & Creativity - 9.1.2026",
     color: "primary",
   },
   2: {
     title: "Day 2",
-    subtitle: "Expression & Performance",
+    subtitle: "Expression & Performance - 12.1.2026",
     color: "accent",
   },
   3: {
     title: "Day 3",
-    subtitle: "Games & Grand Finale",
+    subtitle: "Games & Grand Finale - 13.1.2026",
     color: "secondary",
   },
 };

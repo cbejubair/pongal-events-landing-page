@@ -131,6 +131,7 @@ export const pongalEvents: PongalEvent[] = [
     description: "Unleash your creativity and celebrate tradition through the art of Kolam. Participants will create elegant and intricate kolam designs using kolam powder. The competition highlights precision, symmetry, and cultural expression. Judging will be based on creativity, neatness, and overall visual appeal.",
     icon: "🎨",
     isTeamEvent: true,
+    formUrl: "https://forms.gle/mnUWaYb7Z8D5N8FL7",
     rules: [
       "Team-based competition",
       "Participants must bring their own rangoli materials (kolam powder, colors, etc.); flowers are not allowed",
@@ -205,17 +206,17 @@ export const pongalEvents: PongalEvent[] = [
 export const dayInfo = {
   1: {
     title: "Day 1",
-    subtitle: "Language & Creativity - 10.01.2025",
+    subtitle: "Language & Creativity - 09.01.2026",
     color: "primary",
   },
   2: {
     title: "Day 2",
-    subtitle: "Expression & Performance - 11.01.2025",
+    subtitle: "Expression & Performance - 12.01.2026",
     color: "accent",
   },
   3: {
     title: "Day 3",
-    subtitle: "Games & Grand Finale - 12.01.2025",
+    subtitle: "Games & Grand Finale - 13.01.2026",
     color: "secondary",
   },
 };

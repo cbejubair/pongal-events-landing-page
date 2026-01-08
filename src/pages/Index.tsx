@@ -32,29 +32,24 @@ const Index = () => {
               </span>
             </div>
 
-            {/* Title */}
-            <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-4 animate-slide-in-up text-shadow-glow hero-text-responsive" style={{
-            animationDelay: '100ms'
-          }}>
-              PPG PONGAL THIRUVIZHA'26    
-              <span className="block text-3xl sm:text-4xl md:text-5xl mt-3 text-gold-light animate-shimmer">
-                பொங்கல் திருவிழா
-              </span>
-            </h1>
+            {/* Institution + Title */}
+            <div className="mb-4 animate-slide-in-up" style={{ animationDelay: '100ms' }}>
+              <p className="text-base sm:text-lg md:text-xl text-white/90 mb-1 font-semibold uppercase">
+                PPG INSTITUTE OF TECHNOLOGY
+              </p>
+              <p className="text-sm sm:text-base text-white/70 mb-4">An autonomous institution</p>
 
-            {/* Subtitle */}
-            <p className="text-xl sm:text-2xl md:text-3xl text-white/95 mb-4 font-heading font-semibold animate-slide-in-up text-shadow-glow" style={{
-            animationDelay: '200ms'
-          }}>
-              Celebrating Tamil Culture, Tradition & Talent
-            </p>
+              <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-2 text-shadow-glow hero-text-responsive">
+                PONGAL THIRUVIZHA'26
+                <span className="block text-3xl sm:text-4xl md:text-5xl mt-3 text-gold-light animate-shimmer">
+                  பொங்கல் திருவிழா
+                </span>
+              </h1>
 
-            {/* Institution */}
-            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 font-medium animate-slide-in-up" style={{
-            animationDelay: '300ms'
-          }}>
-              PPG Institute of Technology
-            </p>
+              <p className="text-xl sm:text-2xl md:text-3xl text-white/95 mb-6 font-heading font-semibold text-shadow-glow">
+                Celebrating Tamil Culture, Tradition & Talent
+              </p>
+            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-zoom-in" style={{
